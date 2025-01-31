@@ -1,50 +1,40 @@
-Dishwashing Efficiency App
-Introduction
+# Dishwashing Efficiency App
+
+## Introduction
+
 The Dishwashing Efficiency App is a mobile application designed to help dishwashers manage tasks, reduce stress, and improve workflow. This app aims to improve efficiency, reduce self-induced pressure, and enhance the overall dishwashing experience.
 
-Features
-Task Tracker: Track and check off tasks like washing, sorting, and restocking dishes.
+## Features
 
-Timer & Reminders: Built-in timer to help manage tasks and set reminders.
+-   **Task Tracker**: Track and check off tasks like washing, sorting, and restocking dishes.
+-   **Timer & Reminders**: Built-in timer to help manage tasks and set reminders.
+-   **Efficient Workflow Guide**: Step-by-step guide for different tasks to increase efficiency.
+-   **Cleaning Tips & Tricks**: A section with tips and best practices for dishwashing.
+-   **Music & Motivation**: Integrate with music apps to play your favorite tunes or motivational podcasts.
+-   **Mindfulness & Breathing Exercises**: Short exercises to stay calm and focused.
+-   **Positive Reinforcement**: Track achievements and give yourself positive feedback.
+-   **Break Reminders**: Reminders for short breaks to recharge.
+-   **Stress Relief Tips**: Tips and techniques for stress relief.
+-   **Mood Tracker**: Record how you feel before, during, and after your shift.
+-   **Customizable Alerts**: Set up alerts for different tasks.
+-   **Motivational Challenges**: Gamify tasks with daily or weekly challenges.
 
-Efficient Workflow Guide: Step-by-step guide for different tasks to increase efficiency.
+## Technical Requirements
 
-Cleaning Tips & Tricks: A section with tips and best practices for dishwashing.
+-   **Platform**: Android
+-   **Development Tools**:
+    -   Expo (React Native)
+-   **Database**: SQLite, Firebase, or other suitable options
+-   **Backend**: Node.js, Django, or similar (if needed)
 
-Music & Motivation: Integrate with music apps to play your favorite tunes or motivational podcasts.
+## Installation
 
-Mindfulness & Breathing Exercises: Short exercises to stay calm and focused.
-
-Positive Reinforcement: Track achievements and give yourself positive feedback.
-
-Break Reminders: Reminders for short breaks to recharge.
-
-Stress Relief Tips: Tips and techniques for stress relief.
-
-Mood Tracker: Record how you feel before, during, and after your shift.
-
-Customizable Alerts: Set up alerts for different tasks.
-
-Motivational Challenges: Gamify tasks with daily or weekly challenges.
-
-Technical Requirements
-Platform: Android
-
-Development Tools:
-
-Expo (React Native)
-
-Database: SQLite, Firebase, or other suitable options
-
-Backend: Node.js, Django, or similar (if needed)
-
-Installation
-Clone the repository:
-
-bash
-git clone https://github.com/your-username/dishwashing-efficiency-app.git
-cd dishwashing-efficiency-app
-Install dependencies:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/dishwashing-efficiency-app.git
+    cd dishwashing-efficiency-app
+    Install dependencies:
+    ```
 
 bash
 npm install
