@@ -36,12 +36,15 @@ The Dishwashing Efficiency App is a mobile application designed to help dishwash
     Install dependencies:
     ```
 
-bash
+```bash
 npm install
 Start the Expo project:
+```
 
-bash
+```bash
 expo start
+```
+
 Usage
 Navigate through the app to manage tasks, set timers, access cleaning tips, listen to music, and more.
 
