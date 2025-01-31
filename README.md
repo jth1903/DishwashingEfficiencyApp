@@ -33,17 +33,17 @@ The Dishwashing Efficiency App is a mobile application designed to help dishwash
     ```bash
     git clone https://github.com/your-username/dishwashing-efficiency-app.git
     cd dishwashing-efficiency-app
-    Install dependencies:
     ```
+2. **Install dependencies:**
 
 ```bash
-npm install
+    npm install
 ```
 
 2. **Start the Expo project:**
 
 ```bash
-expo start
+    expo start
 ```
 
 **Usage**
