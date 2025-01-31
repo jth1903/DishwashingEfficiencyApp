@@ -38,48 +38,50 @@ The Dishwashing Efficiency App is a mobile application designed to help dishwash
 
 ```bash
 npm install
-Start the Expo project:
 ```
+
+2. **Start the Expo project:**
 
 ```bash
 expo start
 ```
 
-Usage
-Navigate through the app to manage tasks, set timers, access cleaning tips, listen to music, and more.
+**Usage**
 
-Use the Task Tracker to stay organized and efficient.
+-   Navigate through the app to manage tasks, set timers, access cleaning tips, listen to music, and more.
 
-Set reminders and timers to keep on schedule.
+-   Use the Task Tracker to stay organized and efficient.
 
-Explore the Efficient Workflow Guide for tips on improving your dishwashing process.
+-   Set reminders and timers to keep on schedule.
 
-Practice mindfulness and breathing exercises to stay calm and focused.
+-   Explore the Efficient Workflow Guide for tips on improving your dishwashing process.
 
-Track your achievements and give yourself positive feedback.
+-   Practice mindfulness and breathing exercises to stay calm and focused.
 
-Take short breaks with the help of break reminders.
+-   Track your achievements and give yourself positive feedback.
 
-Access stress relief tips to manage pressure.
+-   Take short breaks with the help of break reminders.
 
-Record your mood and analyze patterns with the Mood Tracker.
+-   Access stress relief tips to manage pressure.
 
-Set up customizable alerts for various tasks.
+-   Record your mood and analyze patterns with the Mood Tracker.
 
-Participate in motivational challenges to gamify your work.
+-   Set up customizable alerts for various tasks.
 
-Contributing
+-   Participate in motivational challenges to gamify your work.
+
+**_Contributing_**
 Contributions are welcome! Please follow these steps to contribute:
 
-Fork the repository.
+-   Fork the repository.
 
-Create a new branch: git checkout -b my-feature-branch.
+-   Create a new branch: git checkout -b my-feature-branch.
 
-Make your changes and commit them: git commit -m 'Add new feature'.
+-   Make your changes and commit them: git commit -m 'Add new feature'.
 
-Push to the branch: git push origin my-feature-branch.
+-   Push to the branch: git push origin my-feature-branch.
 
-Submit a pull request.
+-   Submit a pull request.
 
-License
+**License**
 This project is licensed under the MIT License.
