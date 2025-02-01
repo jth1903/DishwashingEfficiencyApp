@@ -11,6 +11,14 @@ const HomeScreen = ({ navigation }) => {
                 title="Go to Task Tracker"
                 onPress={() => navigation.navigate('TaskTracker')}
             />
+            <Button
+                title="Go to Timer & Reminders"
+                onPress={() => navigation.navigate('TimerReminders')}
+            />
+            <Button
+                title="Go to Efficient Workflow Guide"
+                onPress={() => navigation.navigate('EfficientWorkflowGuide')}
+            />
         </View>
     );
 };
