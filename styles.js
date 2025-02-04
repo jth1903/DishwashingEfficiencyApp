@@ -13,7 +13,7 @@ export const globalStyles = StyleSheet.create({
         marginBottom: 20,
     },
     button: {
-        backgroundColor: '#4CAF50',
+        backgroundColor: '#023e8a',
         padding: 15,
         borderRadius: 10,
         marginVertical: 10,
@@ -94,7 +94,7 @@ export const globalStyles = StyleSheet.create({
     stepTitle: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#4CAF50',
+        color: '#023e8a',
     },
     stepDescription: {
         fontSize: 16,

@@ -31,6 +31,18 @@ const steps = [
         description:
             'Clean or spray pots and pans either placing them in the washer or using the 3 part sink.',
     },
+    {
+        key: '6',
+        title: 'Stock Pots And Pans',
+        description:
+            'Remove Pots and pans from sanitizer and let air dry, after drying stock on the rack.',
+    },
+    {
+        key: '7',
+        title: 'sort and rinse silverware',
+        description:
+            'Sort silverware acording to type, rense while placing in rack for second wash.',
+    },
     // Add more steps as needed
 ];
 
