@@ -6,7 +6,9 @@ import {
     Button,
     FlatList,
     StyleSheet,
+    TouchableOpacity,
 } from 'react-native';
+import { globalStyles } from '../styles';
 
 const TimerRemindersScreen = () => {
     const [timer, setTimer] = useState(0);
@@ -50,67 +52,50 @@ const TimerRemindersScreen = () => {
     };
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Timer & Reminders</Text>
-            <Text style={styles.timer}>{timer}s</Text>
-            <Button
+        <View style={globalStyles.container}>
+            <Text style={globalStyles.title}>Timer & Reminders</Text>
+            <Text style={globalStyles.timer}>{timer}s</Text>
+            <TouchableOpacity
+                style={globalStyles.button}
                 title={isRunning ? 'Stop' : 'Start'}
                 onPress={isRunning ? stopTimer : startTimer}
-            />
-            <Button title="Reset" onPress={resetTimer} />
+            >
+                <Text style={globalStyles.buttonText}>
+                    {isRunning ? 'Stop' : 'Start'}
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={globalStyles.button}
+                title="Reset"
+                onPress={resetTimer}
+            >
+                <Text style={globalStyles.buttonText}>Reset</Text>
+            </TouchableOpacity>
             <TextInput
-                style={styles.input}
+                style={globalStyles.input}
                 placeholder="Set a reminder"
                 value={reminder}
                 onChangeText={setReminder}
             />
-            <Button title="Add Reminder" onPress={addReminder} />
+            <TouchableOpacity
+                style={globalStyles.button}
+                title="Add Reminder"
+                onPress={addReminder}
+            >
+                <Text style={globalStyles.buttonText}>Add Reminder</Text>
+            </TouchableOpacity>
             <FlatList
                 data={reminders}
                 renderItem={({ item }) => (
-                    <View style={styles.reminderContainer}>
-                        <Text style={styles.reminder}>{item.reminder}</Text>
+                    <View style={globalStyles.reminderContainer}>
+                        <Text style={globalStyles.reminder}>
+                            {item.reminder}
+                        </Text>
                     </View>
                 )}
             />
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding: 20,
-    },
-    title: {
-        fontSize: 24,
-        marginBottom: 20,
-    },
-    timer: {
-        fontSize: 48,
-        marginBottom: 20,
-    },
-    input: {
-        height: 40,
-        borderColor: 'gray',
-        borderWidth: 1,
-        marginBottom: 10,
-        paddingLeft: 8,
-        width: '100%',
-    },
-    reminderContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        padding: 10,
-        borderBottomWidth: 1,
-        borderBottomColor: '#ddd',
-        width: '100%',
-    },
-    reminder: {
-        fontSize: 18,
-    },
-});
 
 export default TimerRemindersScreen;

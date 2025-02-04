@@ -1,37 +1,49 @@
 import React from 'react';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { View, Text, FlatList } from 'react-native';
+import { globalStyles } from '../styles';
 
 const steps = [
     {
         key: '1',
-        title: 'Load Dishwasher',
-        description: 'Load the dishwasher with dirty dishes.',
+        title: 'Spray Debri From Dishes',
+        description:
+            'Clean all excess from plates before placing in dish washer.',
     },
     {
         key: '2',
-        title: 'Wash Pots and Pans',
-        description:
-            'Hand wash pots and pans that do not fit in the dishwasher.',
+        title: 'Load Dishwasher',
+        description: 'Load sprayed dishes into the dishwasher.',
     },
     {
         key: '3',
-        title: 'Clean Counters',
+        title: 'Stack And Sort Dishes',
         description:
-            'Wipe down all kitchen counters with a clean cloth and detergent.',
+            'Stack and sort the dishes on the back table before stocking.',
+    },
+    {
+        key: '4',
+        title: 'Stock Plates',
+        description: 'Stock the kitchen with clean plates.',
+    },
+    {
+        key: '5',
+        title: 'Spray/Clean Pots And Pans',
+        description:
+            'Clean or spray pots and pans either placing them in the washer or using the 3 part sink.',
     },
     // Add more steps as needed
 ];
 
 const EfficientWorkflowGuideScreen = () => {
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Efficient Workflow Guide</Text>
+        <View style={globalStyles.container}>
+            <Text style={globalStyles.title}>Efficient Workflow Guide</Text>
             <FlatList
                 data={steps}
                 renderItem={({ item }) => (
-                    <View style={styles.stepContainer}>
-                        <Text style={styles.stepTitle}>{item.title}</Text>
-                        <Text style={styles.stepDescription}>
+                    <View style={globalStyles.stepContainer}>
+                        <Text style={globalStyles.stepTitle}>{item.title}</Text>
+                        <Text style={globalStyles.stepDescription}>
                             {item.description}
                         </Text>
                     </View>
@@ -40,26 +52,5 @@ const EfficientWorkflowGuideScreen = () => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 20,
-    },
-    title: {
-        fontSize: 24,
-        marginBottom: 20,
-    },
-    stepContainer: {
-        marginBottom: 15,
-    },
-    stepTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-    },
-    stepDescription: {
-        fontSize: 16,
-    },
-});
 
 export default EfficientWorkflowGuideScreen;

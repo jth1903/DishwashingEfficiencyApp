@@ -5,9 +5,10 @@ import {
     TextInput,
     Button,
     FlatList,
-    StyleSheet,
     TouchableOpacity,
 } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
+import { globalStyles } from '../styles';
 
 const TaskTrackerScreen = () => {
     const [task, setTask] = useState('');
@@ -36,74 +37,62 @@ const TaskTrackerScreen = () => {
     };
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Task Tracker</Text>
-            <TextInput
-                style={styles.input}
-                placeholder="Enter a task"
-                value={task}
-                onChangeText={setTask}
-            />
-            <Button title="Add Task" onPress={addTask} />
+        <View style={globalStyles.container}>
+            <Text style={globalStyles.title}>Task Tracker</Text>
+            <View style={globalStyles.inputContainer}>
+                <TextInput
+                    style={globalStyles.input}
+                    placeholder="Enter a task"
+                    value={task}
+                    onChangeText={setTask}
+                />
+                <TouchableOpacity
+                    style={globalStyles.button}
+                    title="Add Task"
+                    onPress={addTask}
+                >
+                    <Text style={globalStyles.buttonText}>Add Task</Text>
+                </TouchableOpacity>
+            </View>
             <FlatList
                 data={tasks}
                 renderItem={({ item, index }) => (
-                    <View style={styles.taskContainer}>
-                        <TouchableOpacity
-                            onPress={() => toggleCompletion(index)}
+                    <TouchableOpacity
+                        onPress={() => toggleCompletion(index)}
+                        style={globalStyles.taskContainer}
+                    >
+                        <View
+                            style={[
+                                globalStyles.taskContent,
+                                item.completed && globalStyles.taskCompleted,
+                            ]}
                         >
                             <Text
-                                style={
-                                    item.completed
-                                        ? styles.completedTask
-                                        : styles.task
-                                }
+                                style={[
+                                    globalStyles.taskText,
+                                    item.completed &&
+                                        globalStyles.taskTextCompleted,
+                                ]}
                             >
                                 {item.task}
                             </Text>
-                        </TouchableOpacity>
-                        <Button
-                            title="Delete"
-                            onPress={() => deleteTask(index)}
-                        />
-                    </View>
+                            <TouchableOpacity
+                                onPress={() => deleteTask(index)}
+                                style={globalStyles.deleteButton}
+                            >
+                                <FontAwesome
+                                    name="trash"
+                                    size={24}
+                                    color="red"
+                                />
+                            </TouchableOpacity>
+                        </View>
+                    </TouchableOpacity>
                 )}
+                keyExtractor={(item) => item.key}
             />
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 20,
-    },
-    title: {
-        fontSize: 24,
-        marginBottom: 20,
-    },
-    input: {
-        height: 40,
-        borderColor: 'gray',
-        borderWidth: 1,
-        marginBottom: 10,
-        paddingLeft: 8,
-    },
-    taskContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: 10,
-        borderBottomWidth: 1,
-        borderBottomColor: '#ddd',
-    },
-    task: {
-        fontSize: 18,
-    },
-    completedTask: {
-        fontSize: 18,
-        textDecorationLine: 'line-through',
-    },
-});
 
 export default TaskTrackerScreen;
