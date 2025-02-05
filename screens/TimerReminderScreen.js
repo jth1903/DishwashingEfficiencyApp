@@ -3,9 +3,7 @@ import {
     View,
     Text,
     TextInput,
-    Button,
     FlatList,
-    StyleSheet,
     TouchableOpacity,
 } from 'react-native';
 import { globalStyles } from '../styles';
@@ -57,7 +55,6 @@ const TimerRemindersScreen = () => {
             <Text style={globalStyles.timer}>{timer}s</Text>
             <TouchableOpacity
                 style={globalStyles.button}
-                title={isRunning ? 'Stop' : 'Start'}
                 onPress={isRunning ? stopTimer : startTimer}
             >
                 <Text style={globalStyles.buttonText}>
