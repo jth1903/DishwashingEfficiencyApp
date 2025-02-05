@@ -7,7 +7,7 @@ const HomeScreen = ({ navigation }) => {
     return (
         <View style={globalStyles.container}>
             <Text style={globalStyles.title}>
-                Welcome to Dishwashing Efficiency App
+                Welcome to the Dishwashing Efficiency App
             </Text>
             <TouchableOpacity
                 style={globalStyles.button}
