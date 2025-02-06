@@ -19,6 +19,7 @@ export const globalStyles = StyleSheet.create({
         marginVertical: 10,
         width: '80%',
         alignItems: 'center',
+        alignSelf: 'center',
     },
     buttonText: {
         color: '#FFFFFF',

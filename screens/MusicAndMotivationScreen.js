@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, Button, Alert, Linking } from 'react-native';
+import {
+    View,
+    Text,
+    Button,
+    Alert,
+    Linking,
+    TouchableOpacity,
+} from 'react-native';
 import axios from 'axios';
 import NetInfo from '@react-native-community/netinfo';
 import globalStyles from '../styles'; // Import global styles
@@ -14,7 +21,6 @@ const MusicAndMotivationScreen = () => {
 
     const fetchQuote = async (retries = 3) => {
         try {
-            console.log('Fetching quote...');
             const response = await axios.get(
                 'https://api.forismatic.com/api/1.0/',
                 {
@@ -26,7 +32,6 @@ const MusicAndMotivationScreen = () => {
                     timeout: 5000,
                 }
             );
-            console.log('Quote fetched:', response.data.quoteText);
             setQuote(response.data.quoteText);
         } catch (error) {
             console.error('Error fetching quote:', error);
@@ -70,8 +75,20 @@ const MusicAndMotivationScreen = () => {
     return (
         <View style={globalStyles.container}>
             <Text style={globalStyles.quote}>{quote}</Text>
-            <Button title="Open Spotify" onPress={openSpotify} />
-            <Button title="Refresh Quote" onPress={checkInternetConnection} />
+            <TouchableOpacity
+                style={globalStyles.button}
+                title="Open Spotify"
+                onPress={openSpotify}
+            >
+                <Text style={globalStyles.buttonText}>Open Spotify</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={globalStyles.button}
+                title="Refresh Quote"
+                onPress={checkInternetConnection}
+            >
+                <Text style={globalStyles.buttonText}>Refresh Quote</Text>
+            </TouchableOpacity>
         </View>
     );
 };
