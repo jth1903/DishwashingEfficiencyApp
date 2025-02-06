@@ -100,4 +100,13 @@ export const globalStyles = StyleSheet.create({
         fontSize: 16,
         color: '#333333',
     },
+    quote: {
+        fontSize: 18,
+        marginBottom: 20,
+    },
+    webview: {
+        flex: 1,
+    },
 });
+
+export default globalStyles;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ImageBackground } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { globalStyles } from '../styles';
 
@@ -45,6 +45,20 @@ const HomeScreen = ({ navigation }) => {
                 />
                 <Text style={globalStyles.buttonText}>
                     Efficient Workflow Guide
+                </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={globalStyles.button}
+                onPress={() => navigation.navigate('MusicAndMotivation')}
+            >
+                <FontAwesome
+                    name="music"
+                    size={24}
+                    color="white"
+                    style={globalStyles.icon}
+                />
+                <Text style={globalStyles.buttonText}>
+                    Music And Motivation
                 </Text>
             </TouchableOpacity>
         </View>
