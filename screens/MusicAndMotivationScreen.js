@@ -37,6 +37,8 @@ const MusicAndMotivationScreen = () => {
             console.error('Error fetching quote:', error);
             if (error.response) {
                 console.error('Response error:', error.response.data);
+            } else if (response.data.quoteText === undefined) {
+                setQuote(response.data.quoteText);
             } else if (error.request) {
                 console.error('Request error:', error.request);
             } else {

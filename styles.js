@@ -102,8 +102,12 @@ export const globalStyles = StyleSheet.create({
         color: '#333333',
     },
     quote: {
+        fontWeight: 'bold',
         fontSize: 18,
         marginBottom: 20,
+        fontStyle: 'italic',
+        textAlign: 'center',
+        color: '#023e8a',
     },
     webview: {
         flex: 1,
