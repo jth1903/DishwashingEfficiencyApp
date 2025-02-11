@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     View,
     Text,
@@ -8,19 +8,45 @@ import {
     TouchableOpacity,
 } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { globalStyles } from '../styles';
 
 const TaskTrackerScreen = () => {
     const [task, setTask] = useState('');
     const [tasks, setTasks] = useState([]);
 
+    useEffect(() => {
+        loadTasks();
+    }, []);
+
+    const loadTasks = async () => {
+        try {
+            const savedTasks = await AsyncStorage.getItem('tasks');
+            if (savedTasks) {
+                setTasks(JSON.parse(savedTasks));
+            }
+        } catch (error) {
+            console.error('Failed to load tasks:', error);
+        }
+    };
+
+    const saveTasks = async (newTasks) => {
+        try {
+            await AsyncStorage.setItem('tasks', JSON.stringify(newTasks));
+        } catch (error) {
+            console.error('Failed to save tasks:', error);
+        }
+    };
+
     const addTask = () => {
         if (task) {
-            setTasks([
+            const newTasks = [
                 ...tasks,
                 { key: `${tasks.length}`, task, completed: false },
-            ]);
+            ];
+            setTasks(newTasks);
             setTask('');
+            saveTasks(newTasks);
         }
     };
 
@@ -29,11 +55,13 @@ const TaskTrackerScreen = () => {
             idx === index ? { ...item, completed: !item.completed } : item
         );
         setTasks(newTasks);
+        saveTasks(newTasks);
     };
 
     const deleteTask = (index) => {
         const newTasks = tasks.filter((_, idx) => idx !== index);
         setTasks(newTasks);
+        saveTasks(newTasks);
     };
 
     return (
