@@ -56,7 +56,7 @@ const CleaningTipsScreen = () => {
 
     return (
         <View style={globalStyles.container}>
-            <Text style={globalStyles.titleText}>Cleaning Tips</Text>
+            <Text style={globalStyles.title}>Cleaning Tips</Text>
             <FlatList
                 data={cleaningTips}
                 keyExtractor={(item) => item.id}
