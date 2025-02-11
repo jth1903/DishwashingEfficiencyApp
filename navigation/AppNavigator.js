@@ -6,6 +6,7 @@ import TaskTrackerScreen from '../screens/TaskTrackerScreen';
 import TimerRemindersScreen from '../screens/TimerReminderScreen';
 import EfficientWorkflowGuideScreen from '../screens/EfficientWorkflowGuideScreen';
 import MusicAndMotivationScreen from '../screens/MusicAndMotivationScreen';
+import CleaningTipsScreen from '../screens/CleaningTipsScreen';
 
 const Stack = createStackNavigator();
 
@@ -29,6 +30,10 @@ function AppNavigator() {
                 <Stack.Screen
                     name="MusicAndMotivation"
                     component={MusicAndMotivationScreen}
+                />
+                <Stack.Screen
+                    name="CleaningTips"
+                    component={CleaningTipsScreen}
                 />
             </Stack.Navigator>
         </NavigationContainer>

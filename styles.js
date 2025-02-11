@@ -109,9 +109,6 @@ export const globalStyles = StyleSheet.create({
         textAlign: 'center',
         color: '#023e8a',
     },
-    webview: {
-        flex: 1,
-    },
 });
 
 export default globalStyles;

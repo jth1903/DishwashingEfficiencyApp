@@ -61,6 +61,19 @@ const HomeScreen = ({ navigation }) => {
                     Music And Motivation
                 </Text>
             </TouchableOpacity>
+
+            <TouchableOpacity
+                style={globalStyles.button}
+                onPress={() => navigation.navigate('CleaningTips')}
+            >
+                <FontAwesome
+                    name="lightbulb-o"
+                    size={24}
+                    color="white"
+                    style={globalStyles.icon}
+                />
+                <Text style={globalStyles.buttonText}>Cleaning Tips</Text>
+            </TouchableOpacity>
         </View>
     );
 };
