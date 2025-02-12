@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { globalStyles } from '../styles';
 
 const steps = [
@@ -39,7 +39,7 @@ const steps = [
     },
     {
         key: '7',
-        title: 'sort and rinse silverware',
+        title: 'Sort And Rinse Silverware',
         description:
             'Sort silverware acording to type, rense while placing in rack for second wash.',
     },
@@ -53,12 +53,14 @@ const EfficientWorkflowGuideScreen = () => {
             <FlatList
                 data={steps}
                 renderItem={({ item }) => (
-                    <View style={globalStyles.stepContainer}>
-                        <Text style={globalStyles.stepTitle}>{item.title}</Text>
-                        <Text style={globalStyles.stepDescription}>
+                    <TouchableOpacity style={globalStyles.button}>
+                        <Text style={globalStyles.buttonText}>
+                            {item.title}
+                        </Text>
+                        <Text style={globalStyles.buttonText}>
                             {item.description}
                         </Text>
-                    </View>
+                    </TouchableOpacity>
                 )}
             />
         </View>
