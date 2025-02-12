@@ -28,12 +28,12 @@ function AppNavigator() {
                     component={EfficientWorkflowGuideScreen}
                 />
                 <Stack.Screen
-                    name="MusicAndMotivation"
-                    component={MusicAndMotivationScreen}
-                />
-                <Stack.Screen
                     name="CleaningTips"
                     component={CleaningTipsScreen}
+                />
+                <Stack.Screen
+                    name="MusicAndMotivation"
+                    component={MusicAndMotivationScreen}
                 />
             </Stack.Navigator>
         </NavigationContainer>
